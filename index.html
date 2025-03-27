@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h1 class ="cssanimation typing"> Gestor de Tareas </h1>
+            <script src="quit_animation.js"></script>
+        </div>
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Nueva tarea..." required>
+            <button class= "button-56" role="button" type="submit">Agregar</button>
+        </form>
+        <div id="filters">
+            <button class= "button-56" role="button" data-filter="all">Todas</button>
+            <button class= "button-56" role="button" data-filter="pending">Pendientes</button>
+            <button class= "button-56" role="button" data-filter="completed">Completadas</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

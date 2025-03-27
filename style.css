@@ -1,0 +1,218 @@
+body {
+    font-family: "Winky Sans", sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #ffeeee;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background-image: 
+        radial-gradient(circle at 10% 20%, #eac6c6 0%, transparent 20%),
+        radial-gradient(circle at 90% 30%, #eac6c6 0%, transparent 20%),
+        radial-gradient(circle at 50% 80%, #eac6c6 0%, transparent 20%);
+}
+
+#app {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 8px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid #9fc97e;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+    border-left-color: #eac6c6;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    display: inline-block;
+    text-align: center;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: italic;
+    color: #ff6565;
+    -webkit-text-stroke-color: #eac6c6;
+    -webkit-text-stroke-width: 1px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px #eac6c6;
+}
+
+.typing {
+    max-width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #76b058;
+    animation: typing 2s steps(18, end), cursor .5s steps(12, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-title {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #eac6c6;
+    border-radius: 8px;
+    font-family: "Winky Sans", sans-serif;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#task-title:focus {
+    border-color: #9fc97e;
+    box-shadow: 0 0 0 3px rgba(159, 201, 126, 0.3);
+}
+
+#filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-56 {
+    align-items: center;
+    background-color: #ff6565;
+    border: 2px solid #ff6565;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-family: "Winky Sans", sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: all 0.3s;
+}
+
+.button-56:after {
+    background-color: #eac6c6;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(5px, 5px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0);
+}
+
+.button-56:active {
+    background-color: #e05c5c;
+    outline: 0;
+}
+
+.button-56:hover {
+    outline: 0;
+    background-color: #e05c5c;
+}
+
+.task button {
+    background: none;
+    border: none;
+    color: #ff6565;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: all 0.2s;
+}
+
+.task button:hover {
+    color: #e05c5c;
+    transform: scale(1.1);
+}
+
+.task .completed-btn {
+    color: #9fc97e;
+}
+
+.task .completed-btn:hover {
+    color: #76b058;
+}
+
+/* Mushroom decoration elements */
+.mushroom-decoration {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff6565;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+}
+
+.mushroom-decoration::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background-color: white;
+    bottom: -15px;
+    left: 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+    .button-56 {
+        padding: 0 40px;
+    }
+    
+    body {
+        max-width: 500px;
+    }
+}
